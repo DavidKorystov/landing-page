@@ -27,7 +27,7 @@ body {
 }
 .layout {
   z-index: -1;
-  margin: 22px 135px 0 135px;
+  margin: 192px 135px 0 135px;
   color: #ffffff;
   @media (max-width: 390px) {
     margin: 37px 28px 0 28px;
@@ -42,11 +42,24 @@ body {
 }
 
 .header {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 22px 135px;
+  background: radial-gradient(
+    100% 100% at 0% 0%,
+    rgba(48, 48, 48, 0.15) 0%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  box-shadow: inset -4.50695px -4.50695px 225.348px rgba(255, 255, 255, 0.02);
+  backdrop-filter: blur(12.6195px);
+
   display: flex;
   align-items: center;
   justify-content: space-between;
   color: #f3f3f3;
-  // position: fixed;
 
   &Sidebar {
     cursor: pointer;
@@ -86,7 +99,6 @@ body {
 
 .banner {
   position: relative;
-
   &Background {
     z-index: -1;
     position: absolute;
@@ -592,6 +604,7 @@ $columnGap: 50px;
     &:hover {
       transform: perspective(800px) rotateY(5deg) scale(0.95) rotateX(5deg);
     }
+
     & p {
       @include text(500, 15px, 18px);
       text-transform: uppercase;
