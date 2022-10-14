@@ -16,36 +16,3 @@
   src: local("Mazzard"),
     url("%PUBLIC_URL%/static/fonts/MazzardH-SemiBold.woff") format("woff");
 } */
-
-body {
-  /* font-family: "Mazzard"; */
-  font-family: "Roboto", sans-serif;
-  background: radial-gradient(
-      100% 100% at 80% 80%,
-      rgba(255, 255, 255, 0.07) 0%,
-      rgba(196, 196, 196, 0) 100%
-    ),
-    radial-gradient(
-      50% 50% at 10% 10%,
-      rgba(255, 255, 255, 0.07) 0%,
-      rgba(196, 196, 196, 0) 100%
-    ),
-    radial-gradient(
-      50% 100% at 30% 50%,
-      rgba(0, 65, 218, 0.115) 0%,
-      rgba(196, 196, 196, 0) 100%
-    );
-  /* background: url("./assets/background/circle.png") 0% 50% no-repeat,
-    radial-gradient(
-      100% 100% at 50% 50%,
-      rgba(48, 48, 48, 0.15) 0%,
-      rgba(255, 255, 255, 0) 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(0, 65, 218, 0.115) 0%,
-      rgba(40, 0, 153, 0.115) 91.72%
-    ),
-      black; */
-  background-color: black;
-}

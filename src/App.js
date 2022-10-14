@@ -106,10 +106,15 @@ function App() {
           </p>
           <button>Indexing</button>
           <button>API</button>
-          {/* <div className={styles.servicesArrow}>
-            <span />
-            <span />
-          </div> */}
+
+          <div className={styles.servicesArrow}>
+            <div>
+              <span />
+              <span />
+            </div>
+
+            <span>Consumers</span>
+          </div>
         </div>
 
         <div className={styles.servicesDescription}>
