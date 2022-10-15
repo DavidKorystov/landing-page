@@ -211,8 +211,8 @@ body {
     color: #ffffff;
     @include text(500, 18px, 21px);
     transition-duration: 1s;
+    border: none;
     &:hover {
-      border: none;
       background: rgba(81, 58, 210, 0.4);
       color: #3e53f8;
     }
