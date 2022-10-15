@@ -25,11 +25,7 @@ function App() {
 
       <section className={styles.banner}>
         <div className={styles.bannerBackground} />
-        <img
-          className={styles.bannerRoad}
-          src={require("./assets/background/bannerRoad.png")}
-          alt=""
-        />
+        <div className={styles.bannerRoad} />
 
         <div className={styles.bannerText}>
           <p className={styles.bannerSubtitle}>crypto trading</p>
@@ -51,11 +47,7 @@ function App() {
             </div>
           </button>
 
-          <img
-            style={{ display: "block" }}
-            src={require("./assets/icons/mouse.png")}
-            alt=""
-          />
+          <img src={require("./assets/icons/mouse.png")} alt="" />
         </div>
       </section>
 
@@ -65,9 +57,7 @@ function App() {
           <h2>Global technologies</h2>
         </div>
 
-        <div className={styles.aboutStats}>
-          <img src={require("./assets/images/stats.png")} alt="about stats" />
-        </div>
+        <div className={styles.aboutStats} />
 
         <div className={styles.aboutDescription}>
           <p>Level 1</p>
@@ -87,7 +77,7 @@ function App() {
       </section>
 
       <section className={styles.services}>
-        <div className={styles.networks}>
+        <div className={styles.servicesNetworks}>
           <button>Artificial Intelligence</button>
           <button>Storage Networks</button>
           <button>P2P Networks</button>
@@ -98,7 +88,7 @@ function App() {
           <button>Encrypted Private Data *</button>
         </div>
 
-        <div className={styles.networksService}>
+        <div className={styles.servicesPersonal}>
           <img src={require("./assets/icons/service.png")} alt="" />
           <p>
             Easy to use digital service and exclusive personal service for our
