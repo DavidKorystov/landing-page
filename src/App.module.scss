@@ -60,7 +60,7 @@ body {
   &Sidebar {
     cursor: pointer;
     width: 32px;
-    @media (min-width: 1000px) {
+    @media (min-width: 1001px) {
       display: none;
     }
   }
@@ -355,6 +355,7 @@ body {
     }
   }
 }
+
 $columnGap: 50px;
 .services {
   display: flex;
@@ -388,6 +389,9 @@ $columnGap: 50px;
     box-sizing: border-box;
     background: #000000;
     border-radius: 11px;
+    @media (max-width: 1000px) {
+      @include text(400, 14px, 130%);
+    }
   }
 
   &Description {
@@ -468,9 +472,7 @@ $columnGap: 50px;
     backdrop-filter: blur(12.6195px);
     border: solid rgba(255, 255, 255, 0.4) 1px;
     border-radius: 25.2389px;
-    @media (max-width: 1000px) {
-      align-self: auto;
-    }
+
     & > button {
       position: relative;
       &::after {
@@ -495,6 +497,86 @@ $columnGap: 50px;
         right: calc(-28px + $columnGap / -2);
       }
     }
+    @media (max-width: 1000px) {
+      align-self: auto;
+      padding: 0;
+      flex-direction: row;
+      align-items: end;
+      width: auto;
+      position: relative;
+      width: 334px;
+      height: 180px;
+      & > button {
+        height: 58px;
+        &:nth-child(1) {
+          box-sizing: border-box;
+          position: absolute;
+          width: 130px;
+          height: 58px;
+          left: 20px;
+          top: 98px;
+          &::after {
+            @media (max-width: 1000px) {
+              bottom: -25px;
+              left: 50%;
+              right: 50%;
+              height: 22px;
+            }
+          }
+        }
+        &:nth-child(2) {
+          box-sizing: border-box;
+          position: absolute;
+          width: 130px;
+          height: 58px;
+          left: 184px;
+          top: 98px;
+
+          order: 2;
+          &::after {
+            @media (max-width: 1000px) {
+              bottom: -25px;
+              left: 50%;
+              right: 50%;
+              height: 22px;
+            }
+          }
+          &:before {
+            @media (max-width: 1000px) {
+              display: none;
+            }
+          }
+        }
+        &:nth-child(3) {
+          box-sizing: border-box;
+          position: absolute;
+          width: 160px;
+          height: 58px;
+          left: 87px;
+          top: 20px;
+          &::after {
+            @media (max-width: 1000px) {
+              bottom: -143px;
+              left: 50%;
+              right: 50%;
+              height: 140px;
+            }
+          }
+          &:before {
+            @media (max-width: 1000px) {
+              content: "";
+              position: absolute;
+              border: solid rgba(255, 255, 255, 0.4) 0.9px;
+              top: 198px;
+              left: 1px;
+              right: -1px;
+
+              opacity: 0.8;
+            }
+          }
+        }
+      }
+    }
   }
 
   &Buttons {
@@ -502,7 +584,9 @@ $columnGap: 50px;
     row-gap: 30px;
     margin-top: 190px;
     @media (max-width: 1000px) {
-      margin-top: 0;
+      margin-top: 20px;
+      display: flex;
+      align-items: center;
     }
     & > button {
       position: relative;
@@ -530,10 +614,28 @@ $columnGap: 50px;
       &:last-child {
         height: 70px;
       }
-    }
-
-    @media (max-width: 390px) {
-      margin-top: 0;
+      @media (max-width: 1000px) {
+        margin: 0 20px;
+        width: 150px;
+        height: 58px !important;
+        &::before {
+          display: none;
+        }
+        &:first-child::after {
+          z-index: -1;
+          top: -33px;
+          bottom: -52px;
+          left: 60%;
+          right: 40%;
+        }
+        &:last-child::after {
+          z-index: -1;
+          top: -33px;
+          bottom: -52px;
+          left: 40%;
+          right: 60%;
+        }
+      }
     }
   }
 
@@ -558,46 +660,83 @@ $columnGap: 50px;
       text-align: center;
       font-feature-settings: "pnum" on, "lnum" on;
     }
+    @media (max-width: 1000px) {
+      padding: 0;
+      width: 334px;
+      height: 276px;
+      & > button {
+        box-sizing: border-box;
+        position: absolute;
+        width: 130px;
+        height: 58px;
+        left: 20px;
+        top: 24px;
+        &:last-of-type {
+          box-sizing: border-box;
+          position: absolute;
+          width: 130px;
+          height: 58px;
+          left: 184px;
+          top: 24px;
+        }
+      }
+      & > img {
+        position: absolute;
+        left: calc(332 / 2);
+        top: 103px;
+      }
+      & > p {
+        position: absolute;
+        left: 50px;
+        bottom: 59px;
+        max-width: 227px !important;
+        height: 60px !important;
+      }
+    }
   }
 
   &Arrow {
     position: absolute;
     left: calc(50% - 40px);
     bottom: -75px;
-    & > div {
-      & > span {
-        position: absolute;
-        height: 80px;
-        border: solid rgba(255, 255, 255, 0.4) 0.9px;
-        &:nth-child(1) {
-          top: -105px;
-          left: calc(50% - 15px);
-          &::before {
-            content: "";
-            border: solid rgba(177, 178, 186, 1);
-            border-width: 0 1.7px 1.7px 0;
-            display: inline-block;
-            padding: 3px;
-            position: absolute;
-            bottom: -5px;
-            left: -3.5px;
-            transform: rotate(45deg);
-          }
+    @media (max-width: 1000px) {
+      bottom: -105px;
+    }
+    & > div > span {
+      position: absolute;
+      height: 80px;
+      border: solid rgba(255, 255, 255, 0.4) 0.9px;
+      @media (max-width: 1000px) {
+        height: 50px;
+      }
+      &:nth-child(1) {
+        top: -105px;
+        left: calc(50% - 15px);
+        &::before {
+          content: "";
+          border: solid rgba(177, 178, 186, 1);
+          border-width: 0 1.7px 1.7px 0;
+          display: inline-block;
+          padding: 3px;
+          position: absolute;
+          bottom: -5px;
+          left: -3.5px;
+          transform: rotate(45deg);
         }
-        &:nth-child(2) {
-          top: -100px;
-          left: calc(50% + 15px);
-          &::before {
-            content: "";
-            border: solid rgba(177, 178, 186, 1);
-            border-width: 0 1.7px 1.7px 0;
-            display: inline-block;
-            padding: 3px;
-            position: absolute;
-            top: -5px;
-            left: -3.5px;
-            transform: rotate(-135deg);
-          }
+      }
+      &:nth-child(2) {
+        top: -100px;
+        left: calc(50% + 15px);
+        &::before {
+          content: "";
+          border: solid rgba(177, 178, 186, 1);
+          border-width: 0 1.7px 1.7px 0;
+          display: inline-block;
+          padding: 3px;
+          position: absolute;
+          top: -5px;
+          left: -3.5px;
+          transform: rotate(-135deg);
         }
       }
     }
