@@ -24,18 +24,15 @@ function App() {
       </header>
 
       <section className={styles.banner}>
-        <div className={styles.bannerBackground} />
-        <div className={styles.bannerRoad} />
-
         <div className={styles.bannerText}>
           <p className={styles.bannerSubtitle}>crypto trading</p>
           <h2 className={styles.bannerTitle}>
             Engineers Meet
-            <span className={styles.bannerGradient}> Traders _</span>
+            <span className={styles.bannerGradient}> Traders __</span>
           </h2>
           <p className={styles.bannerDescription}>
-            Advanced crypto algorithmic trading and efficient <br />
-            cross-chain execution, at scale.
+            Advanced crypto algorithmic trading and efficient cross-chain
+            execution, at scale.
           </p>
         </div>
 

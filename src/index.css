@@ -11,8 +11,9 @@
     url("%PUBLIC_URL%/static/fonts/MazzardH-Medium.woff") format("woff");
 }
 @font-face {
-  font-family: "Mazzard";
+ font-family: Mazzard;
+  font-display: swap;
+  src: url("./fonts/MazzardH-SemiBold.woff2") format("woff2");
   font-weight: 600;
-  src: local("Mazzard"),
-    url("%PUBLIC_URL%/static/fonts/MazzardH-SemiBold.woff") format("woff");
+  font-style: normal;
 } */
